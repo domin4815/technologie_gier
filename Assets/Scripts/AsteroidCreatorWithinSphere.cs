@@ -2,7 +2,7 @@
 using System.Collections;
 using System.Collections.Generic;
 
-public class ObjectCreatorWithinSphere : MonoBehaviour {
+public class AsteroidCreatorWithinSphere : MonoBehaviour {
 
 	public List<GameObject> prefabs;
 	public GameObject reference;
