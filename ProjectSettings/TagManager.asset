@@ -5,6 +5,11 @@ TagManager:
   serializedVersion: 2
   tags:
   - Creator
+  - Earth Clouds
+  - YellowPowerUp
+  - RedPowerUp
+  - TextHP
+  - TextPoints
   layers:
   - Default
   - TransparentFX

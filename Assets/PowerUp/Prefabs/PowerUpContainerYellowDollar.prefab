@@ -119,7 +119,7 @@ GameObject:
   - 4: {fileID: 400006}
   m_Layer: 0
   m_Name: PowerUpContainerYellowDollar
-  m_TagString: Untagged
+  m_TagString: YellowPowerUp
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -487,6 +487,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e765fba735d2fc64aabcb9e6a00357fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hpText: {fileID: 0}
+  scoreText: {fileID: 0}
+  spaceShip: {fileID: 0}
 --- !u!135 &13500000
 SphereCollider:
   m_ObjectHideFlags: 1

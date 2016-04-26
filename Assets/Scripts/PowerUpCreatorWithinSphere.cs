@@ -10,8 +10,10 @@ public class PowerUpCreatorWithinSphere : MonoBehaviour {
 	public float minStartDistFromShip;
 	public float maxStartDistFromShip;
 	public float destroyDistFromShip;
+	public float delay = 2.0f;
 	private GameObject prefab;
 	private float objectRadius;
+	private float currentDelay = 0f;
 
 	public void CreateObject() {
 		int index = Random.Range (0, prefabs.Count);
@@ -40,12 +42,15 @@ public class PowerUpCreatorWithinSphere : MonoBehaviour {
 	}
 		
 	void Update () {
-		foreach (Transform t in transform) {
-			float distanceFromShip = Vector3.Distance (t.position, reference.transform.position);
-			if (distanceFromShip > destroyDistFromShip) {
-				Destroy (t.gameObject);
-				CreateObject();
+		if(Time.time > currentDelay) {
+			foreach (Transform t in transform) {
+				float distanceFromShip = Vector3.Distance (t.position, reference.transform.position);
+				if (distanceFromShip > destroyDistFromShip) {
+					Destroy (t.gameObject);
+					CreateObject();
+				}
 			}
+			currentDelay = Time.time + delay;
 		}
 	}
 }

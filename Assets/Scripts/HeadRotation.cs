@@ -4,7 +4,7 @@ public class HeadRotation : MonoBehaviour {
 	public bool updateEarly = false;
 
 	public delegate void HeadUpdatedDelegate(GameObject head);
-
+	public TextMesh tm;
 	public event HeadUpdatedDelegate OnHeadUpdated;
 
 	void Awake() {
