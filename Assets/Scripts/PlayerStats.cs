@@ -5,6 +5,7 @@ public class PlayerStats {
 
 	private int hp;
 	private int score;
+	public int maxHp = 100;
 
 	private static PlayerStats instance = null;
 	
@@ -24,8 +25,14 @@ public class PlayerStats {
 
 	public void addHp(int h) {
 		hp += h;
-		if(hp > 100)
-			hp = 100;
+		if(hp > maxHp)
+			hp = maxHp;
+	}
+
+	public void decHp(int h) {
+		hp -= h;
+		if (hp < 0)
+			hp = 0;
 	}
 
 	public string getHpString() {

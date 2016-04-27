@@ -444,9 +444,9 @@ GameObject:
   - 65: {fileID: 310035891}
   - 82: {fileID: 310035892}
   - 82: {fileID: 310035894}
-  - 114: {fileID: 310035893}
   - 114: {fileID: 310035890}
   - 114: {fileID: 310035886}
+  - 114: {fileID: 310035893}
   - 114: {fileID: 310035889}
   m_Layer: 0
   m_Name: FighterMediumPrefab
@@ -507,7 +507,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 310035885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 432d661bdf426e548ae333c19c7c5e81, type: 3}
+  m_Script: {fileID: 11500000, guid: 852d236c90cb23745b43d40902d0465e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &310035890
@@ -617,7 +617,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 310035885}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2cdd7de050995844fa0b24287a4c4239, type: 3}
+  m_Script: {fileID: 11500000, guid: 6a89b78fa317cbe40a7a9f86f32e7f00, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!82 &310035894
@@ -2566,6 +2566,54 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!1 &1949116125
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1949116127}
+  - 114: {fileID: 1949116126}
+  m_Layer: 0
+  m_Name: PowerUpCreator
+  m_TagString: Creator
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1949116126
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1949116125}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd071c84efbef7c47ae2b60f88e2e1a2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabs:
+  - {fileID: 100008, guid: 879451a5e2214f143a7edf5dd3e32020, type: 2}
+  - {fileID: 100012, guid: f832b09c86bd81e4f91beb978de1ae75, type: 2}
+  reference: {fileID: 310035885}
+  numberOfObjects: 150
+  minStartDistFromShip: 300
+  maxStartDistFromShip: 800
+  destroyDistFromShip: 1200
+  delay: 2
+--- !u!4 &1949116127
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1949116125}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
 --- !u!1001 &2014915418
 Prefab:
   m_ObjectHideFlags: 0
@@ -2683,34 +2731,13 @@ GameObject:
   m_Component:
   - 4: {fileID: 2069481091}
   - 114: {fileID: 2069481092}
-  - 114: {fileID: 2069481090}
   m_Layer: 0
-  m_Name: ObjectCreator
-  m_TagString: Creator
+  m_Name: AsteroidCreator
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &2069481090
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2069481089}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd071c84efbef7c47ae2b60f88e2e1a2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  prefabs:
-  - {fileID: 100008, guid: 879451a5e2214f143a7edf5dd3e32020, type: 2}
-  - {fileID: 100012, guid: f832b09c86bd81e4f91beb978de1ae75, type: 2}
-  reference: {fileID: 310035885}
-  numberOfObjects: 100
-  minStartDistFromShip: 100
-  maxStartDistFromShip: 800
-  destroyDistFromShip: 1200
-  delay: 2
 --- !u!4 &2069481091
 Transform:
   m_ObjectHideFlags: 0
@@ -2740,7 +2767,7 @@ MonoBehaviour:
   - {fileID: 173668, guid: 965a95650c5ae2a48b35aa03ca4a0a31, type: 2}
   - {fileID: 190680, guid: 72776d15a565f3f499c3d02414de971e, type: 2}
   reference: {fileID: 310035885}
-  numberOfObjects: 100
+  numberOfObjects: 500
   minStartDistFromShip: 800
   maxStartDistFromShip: 1000
   destroyDistFromShip: 1200
