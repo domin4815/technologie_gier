@@ -14,13 +14,14 @@ public class ExternalController : MonoBehaviour {
 	float x;
 	float y;
 	float z;
+	float speed;
 	public int port = 9876;
 	// Use this for initialization
 	void Start () {
-		Debug.Log(client);
 		receiveThread = new Thread(new ThreadStart(ReceiveData));
 		receiveThread.IsBackground = true;
 		receiveThread.Start();
+
 	}
 
 	private  void ReceiveData() {
@@ -39,8 +40,8 @@ public class ExternalController : MonoBehaviour {
 	            x = float.Parse(words[1].TrimEnd(','));
 	            y = float.Parse(words[3].TrimEnd(','));
 	            z = float.Parse(words[5].TrimEnd(','));
-	            float speed = float.Parse(words[7].TrimEnd(','));
-	            // Debug.Log(x+" "+y+" "+z+" "+speed);
+	            speed = float.Parse(words[7].TrimEnd(','));
+	            Debug.Log(x+" "+y+" "+z+" "+speed);
 	      	}catch (Exception err) {
                 print(err.ToString());
             }
@@ -62,5 +63,7 @@ public class ExternalController : MonoBehaviour {
 		client.Close();
 		Debug.Log("exit");
 	}
+
+
 
 }
