@@ -7,11 +7,13 @@ using System.Net.Sockets;
 using System.Threading;
 
 public class InitShipUI : MonoBehaviour {
+
 	void Start() {
 		PlayerStats stats = PlayerStats.getInstance();
+		GameObject canvasController = GameObject.FindGameObjectWithTag ("CanvasController");
+		stats.canvasController = canvasController.GetComponent<GameOverCanvas> ();
 		stats.updateHpText();
 		stats.updateScoreText();
-
 	
 	  	string localIP = "Unknown";
     	using (Socket socket = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, 0))

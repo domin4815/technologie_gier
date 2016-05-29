@@ -1,21 +1,22 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
+using UnityEngine.SceneManagement;
 
 public class PlayerStats {
 
+	public GameOverCanvas canvasController;
 	private int hp;
 	private int score;
 	public int maxHp = 100;
 
 	private static PlayerStats instance = null;
-	
 
 	private PlayerStats() {
 		hp = 50;
 		score = 0;
 	}
-
-
+		
 	public static PlayerStats getInstance() {
 		if(instance == null) {
 			instance = new PlayerStats();
@@ -31,8 +32,13 @@ public class PlayerStats {
 
 	public void decHp(int h) {
 		hp -= h;
-		if (hp < 0)
+		if (hp <= 0) {
 			hp = 0;
+			int playthroughScore = score;
+			score = 0;
+			hp = 50;
+			canvasController.initGameOverCanvas (playthroughScore);
+		}
 	}
 
 	public string getHpString() {

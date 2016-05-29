@@ -59,11 +59,19 @@ public class ExternalController : MonoBehaviour {
 	}
 
 	void OnApplicationQuit() { 
-		receiveThread.Abort();
-		client.Close();
-		Debug.Log("exit");
+		if(receiveThread != null) 
+			receiveThread.Abort();
+		if(client != null)
+			client.Close();
+		Debug.Log("Exit");
 	}
 
-
+	void OnDestroy(){
+		if(receiveThread != null) 
+			receiveThread.Abort();
+		if(client != null)
+			client.Close();
+		Debug.Log("Destroy");
+	}
 
 }

@@ -11,6 +11,7 @@ TagManager:
   - TextHP
   - TextPoints
   - IPAddr
+  - CanvasController
   layers:
   - Default
   - TransparentFX
