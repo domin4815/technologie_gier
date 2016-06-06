@@ -14,7 +14,7 @@ public class ExternalController : MonoBehaviour {
 	float x;
 	float y;
 	float z;
-	float speed;
+	float speed = 0f;
 	public int port = 9876;
 	// Use this for initialization
 	void Start () {
@@ -31,17 +31,15 @@ public class ExternalController : MonoBehaviour {
 			try {
 				IPEndPoint anyIP = new IPEndPoint(IPAddress.Any, 0);
 	            byte[] data = client.Receive(ref anyIP);
-	            // Debug.Log("x:"+BitConverter.ToSingle(data, 0));
-	            // Debug.Log("y:"+BitConverter.ToSingle(data, 3));
-	            // Debug.Log("z:"+BitConverter.ToSingle(data, 7));
-	            string text = Encoding.UTF8.GetString(data);
-	            string[] words = text.Split(' ');
-	            // Debug.Log(text);
-	            x = float.Parse(words[1].TrimEnd(','));
-	            y = float.Parse(words[3].TrimEnd(','));
-	            z = float.Parse(words[5].TrimEnd(','));
-	            speed = float.Parse(words[7].TrimEnd(','));
-	            Debug.Log(x+" "+y+" "+z+" "+speed);
+	            Array.Reverse(data, 0, 4);
+	            Array.Reverse(data, 4, 4);
+	            Array.Reverse(data, 8, 4);
+	            Array.Reverse(data, 12, 4);
+	            x = BitConverter.ToSingle(data, 0);
+	            y = BitConverter.ToSingle(data, 4);
+	            z = BitConverter.ToSingle(data, 8);
+	            speed = BitConverter.ToSingle(data, 12);
+	            Debug.Log(x+" "+y+" "+z+" "+speed+" "+data.Length);
 	      	}catch (Exception err) {
                 print(err.ToString());
             }
@@ -56,6 +54,8 @@ public class ExternalController : MonoBehaviour {
 
 		transform.Rotate(Vector3.left * Time.deltaTime*(10*z));
 		transform.Rotate(Vector3.back * Time.deltaTime*(10*y));
+
+		transform.position += transform.forward * Time.deltaTime * (20+3*speed);
 	}
 
 	void OnApplicationQuit() { 
