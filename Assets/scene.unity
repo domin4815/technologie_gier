@@ -671,7 +671,7 @@ Rigidbody:
   m_UseGravity: 0
   m_IsKinematic: 0
   m_Interpolate: 0
-  m_Constraints: 0
+  m_Constraints: 112
   m_CollisionDetection: 0
 --- !u!4 &310035888
 Transform:
@@ -738,7 +738,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: dea7a0352a2118147a1dd54ae7f94174, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.04
+  m_Volume: 0.2
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -3277,11 +3277,11 @@ MonoBehaviour:
   - {fileID: 173668, guid: 965a95650c5ae2a48b35aa03ca4a0a31, type: 2}
   - {fileID: 190680, guid: 72776d15a565f3f499c3d02414de971e, type: 2}
   reference: {fileID: 310035885}
-  numberOfObjects: 100
-  minStartDistFromShip: 650
-  maxStartDistFromShip: 750
-  destroyDistFromShip: 1000
-  delay: 1
+  numberOfObjects: 500
+  minStartDistFromShip: 1300
+  maxStartDistFromShip: 1600
+  destroyDistFromShip: 2000
+  delay: 2
 --- !u!1001 &2074099185
 Prefab:
   m_ObjectHideFlags: 0
