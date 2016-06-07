@@ -30,7 +30,7 @@ Transform:
   m_GameObject: {fileID: 190680}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 6000, y: 6000, z: 6000}
+  m_LocalScale: {x: 8000, y: 8000, z: 8000}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -95,7 +95,7 @@ AudioSource:
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 1
+  Loop: 0
   Mute: 0
   Spatialize: 0
   Priority: 128
@@ -167,7 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f9f79206fcbc49a59c55a5b38d15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 150
+  maxDistance: 1000
 --- !u!114 &11486080
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -179,8 +179,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895d3a61b5dd11a44a9ff37aa3934837, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  thrust: 60
-  maxRotationSpeed: 80
+  thrust: 15
+  maxRotationSpeed: 40
 --- !u!135 &13512664
 SphereCollider:
   m_ObjectHideFlags: 1
