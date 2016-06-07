@@ -13,8 +13,8 @@ GameObject:
   - 135: {fileID: 13503294}
   - 114: {fileID: 11439334}
   - 82: {fileID: 8268254}
-  - 114: {fileID: 11410870}
   - 54: {fileID: 5480464}
+  - 114: {fileID: 11466572}
   m_Layer: 0
   m_Name: Asteroid_F
   m_TagString: Untagged
@@ -156,18 +156,6 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &11410870
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 190680}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0f9f79206fcbc49a59c55a5b38d15d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxDistance: 1000
 --- !u!114 &11439334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -181,6 +169,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   thrust: 15
   maxRotationSpeed: 40
+--- !u!114 &11466572
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 190680}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9a36aea48c6a07947bb7feb6a17cc6b7, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxDistance: 500
 --- !u!135 &13503294
 SphereCollider:
   m_ObjectHideFlags: 1

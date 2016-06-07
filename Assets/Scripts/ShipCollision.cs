@@ -5,6 +5,7 @@ using System.Collections.Generic;
 public class ShipCollision : MonoBehaviour {
 
 	private AudioSource source;
+	public int maxClips = 0;
 
 	void Start () {
 		AudioSource[] sources = GetComponents<AudioSource> ();

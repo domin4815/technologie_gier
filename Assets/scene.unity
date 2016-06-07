@@ -702,6 +702,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 852d236c90cb23745b43d40902d0465e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  maxClips: 0
 --- !u!114 &310035890
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -823,7 +824,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 18d805fe92dce9f43972a98bfcd49525, type: 3}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.8
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -2189,7 +2190,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4e0f9f79206fcbc49a59c55a5b38d15d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 400
 --- !u!82 &1249975667
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3277,9 +3277,9 @@ MonoBehaviour:
   - {fileID: 173668, guid: 965a95650c5ae2a48b35aa03ca4a0a31, type: 2}
   - {fileID: 190680, guid: 72776d15a565f3f499c3d02414de971e, type: 2}
   reference: {fileID: 310035885}
-  numberOfObjects: 500
-  minStartDistFromShip: 1300
-  maxStartDistFromShip: 1600
+  numberOfObjects: 400
+  minStartDistFromShip: 1200
+  maxStartDistFromShip: 1500
   destroyDistFromShip: 2000
   delay: 2
 --- !u!1001 &2074099185

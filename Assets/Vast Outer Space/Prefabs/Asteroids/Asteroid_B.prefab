@@ -13,8 +13,8 @@ GameObject:
   - 135: {fileID: 13512664}
   - 114: {fileID: 11486080}
   - 82: {fileID: 8293432}
-  - 114: {fileID: 11482934}
   - 54: {fileID: 5410282}
+  - 114: {fileID: 11449192}
   m_Layer: 0
   m_Name: Asteroid_B
   m_TagString: Untagged
@@ -156,7 +156,7 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 0
---- !u!114 &11482934
+--- !u!114 &11449192
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -164,10 +164,10 @@ MonoBehaviour:
   m_GameObject: {fileID: 190680}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4e0f9f79206fcbc49a59c55a5b38d15d, type: 3}
+  m_Script: {fileID: 11500000, guid: 9a36aea48c6a07947bb7feb6a17cc6b7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxDistance: 1000
+  maxDistance: 500
 --- !u!114 &11486080
 MonoBehaviour:
   m_ObjectHideFlags: 1

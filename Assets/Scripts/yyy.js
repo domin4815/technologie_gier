@@ -11,6 +11,7 @@ function Start () {
 function Update () {
 	var playerDistance = Vector3.Distance(player.transform.position, transform.position);
  	if (playerDistance < maxDistance + 200.0) {
+ 		var shipCollision = player.GetComponent("ShipCollision");
  		if (canPlayAudio) {
  			source.loop = true;
  			var distance = (maxDistance - playerDistance + 200.0) / maxDistance;
